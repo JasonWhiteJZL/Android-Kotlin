@@ -17,3 +17,9 @@ WIFI编译
 
 20230924
 创建分支，Linux一个，win11一个
+
+20230925
+github已连接，创建分支，切换分支，linux,win11  or  dve版  main版
+
+20231004
+无
