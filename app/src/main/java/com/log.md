@@ -19,7 +19,10 @@ WIFI编译
 创建分支，Linux一个，win11一个
 
 20230925
-github已连接，创建分支，切换分支，linux,win11  or  dve版  main版
+github已连接，创建分支，切换分支，dve  main
 
 20231004
 无
+
+20231007
+分支已创建完成，分别为main,dev分支，在dev分支进行操作，最后合并到main分支上
