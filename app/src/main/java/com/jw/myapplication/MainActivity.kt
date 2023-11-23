@@ -52,16 +52,4 @@ fun GreetingPreview() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun TabBar()
-{
-    val tabs = MainTabs.values()
-    var position by remember {mutableStateOf(MainTabs.One)}
-    Scaffold (
 
-
-    ){
-
-    }
-}
