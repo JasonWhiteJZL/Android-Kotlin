@@ -44,4 +44,4 @@ ProcessOn设计
 20231025
 NavController 通过这个方法写Splash跳转到Main界面，UI内容自己定义。
 
-1
+1234
