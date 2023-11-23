@@ -26,4 +26,22 @@ github已连接，创建分支，切换分支，dve  main
 
 20231007
 分支已创建完成，分别为main,dev分支，在dev分支进行操作，最后合并到main分支上
-12
+
+20231011
+nothing!!!
+
+20231015
+制作一个音乐相关的App,服务端自己通过Java来写，框架使用SpringCloud,使用微服务Redis,最后通过Docker部署
+客户端使用Android,使用Kotlin语言，页面使用Compose和XML混合呈现，最后需要做混淆应对反编译
+并且需要使用到一些设计模式
+ProcessOn设计
+
+
+项目周期2个月 截止完成日期12月15日
+
+不要浪费时间了，跳出这个圈子，沉淀下来认真做完这件事情，keep on study！！！
+
+20231025
+NavController 通过这个方法写Splash跳转到Main界面，UI内容自己定义。
+
+1234
