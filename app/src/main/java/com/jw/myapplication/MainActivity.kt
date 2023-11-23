@@ -40,6 +40,7 @@ class MainActivity : ComponentActivity() {
 fun Navigation()
 {
     val navController = rememberNavController()
+    var
 
 }
 
