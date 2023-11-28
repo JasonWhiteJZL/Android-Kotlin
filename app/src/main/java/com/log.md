@@ -43,3 +43,6 @@ ProcessOn设计
 
 20231025
 NavController 通过这个方法写Splash跳转到Main界面，UI内容自己定义。
+
+20231128
+Splash Demo已完成，需要做跳转操作 使用navController NavHost 来进行此类操作
