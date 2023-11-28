@@ -39,6 +39,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Navigation()
 {
-
+ var
 }
 
