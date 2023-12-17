@@ -49,3 +49,8 @@ Splash Demo已完成，需要做跳转操作 使用navController NavHost 来进�
 
 20231216
 已完成跳转逻辑，待测试
+
+20231217
+编译成功，但是在Main界面使用返回上一级会返回到Splash
+需在这个Compose里做跳转操作，跳转到Main界面里
+后续解决这个问题，并开始着手Main界面的编写，以及选择转盘

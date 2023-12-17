@@ -1,3 +1,4 @@
+
 package com.jw.myapplication
 
 import android.content.Intent
@@ -38,7 +39,7 @@ class SplashActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    Navigation()
                 }
             }
         }
@@ -68,12 +69,10 @@ fun SplashScreen(navController: NavHostController)
             .background(MaterialTheme.colorScheme.primaryContainer)
             .padding(16.dp)
         )
-    val intent = Intent(context,Main::class.java)
+    val intent = Intent(context,MainActivity::class.java)
     context.startActivity(intent)
 
 }
-
-
 @Preview(showBackground = true)
 @Composable
 fun SplashScreenPreview()
