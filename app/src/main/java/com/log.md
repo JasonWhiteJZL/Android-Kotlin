@@ -54,3 +54,10 @@ Splash Demo已完成，需要做跳转操作 使用navController NavHost 来进�
 编译成功，但是在Main界面使用返回上一级会返回到Splash
 需在这个Compose里做跳转操作，跳转到Main界面里
 后续解决这个问题，并开始着手Main界面的编写，以及选择转盘
+
+20231218
+Splash还要在更改，页面设计，跳转方式，动画效果，以及修复返回上一级的操作返回到Splash的问题
+构建主界面
+
+20231219
+学习Compose & Kotlin

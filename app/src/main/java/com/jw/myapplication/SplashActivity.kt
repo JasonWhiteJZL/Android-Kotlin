@@ -69,7 +69,7 @@ fun SplashScreen(navController: NavHostController)
             .background(MaterialTheme.colorScheme.primaryContainer)
             .padding(16.dp)
         )
-    val intent = Intent(context,MainActivity::class.java)
+    val intent = Intent(context,LoginActivity::class.java)
     context.startActivity(intent)
 
 }
