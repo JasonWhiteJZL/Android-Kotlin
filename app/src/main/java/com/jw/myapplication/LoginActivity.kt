@@ -6,12 +6,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -24,7 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import com.jw.myapplication.method.Login
+import com.jw.myapplication.method.LoginMethod
 import com.jw.myapplication.ui.theme.JwmusicTheme
 
 class LoginActivity : ComponentActivity() {
@@ -37,7 +33,7 @@ class LoginActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                  Login()
+                  LoginMethod()
                 }
             }
         }
@@ -50,8 +46,40 @@ fun Login()
     val context = LocalContext.current
     var account by remember { mutableStateOf("") }
     var pwd by remember { mutableStateOf("") }
-    val openDialog = remember { mutableStateOf(true) }
-    var login : Login = Login()
+    var showDialog by remember { mutableStateOf(false) }
+    var login : LoginMethod = LoginMethod()
+
+    if (showDialog) {
+        AlertDialog(
+            onDismissRequest = {
+                // 关闭对话框
+                showDialog = false
+            },
+            title = {
+                Text("AlertDialog Title")
+            },
+            text = {
+                Text("Your entered text: ")
+            },
+            confirmButton = {
+                Button(onClick = {
+                    // 处理确认按钮点击事件
+                    showDialog = false
+                }) {
+                    Text("OK")
+                }
+            },
+            dismissButton = {
+                // 可选的取消按钮
+                Button(onClick = {
+                    // 处理取消按钮点击事件
+                    showDialog = false
+                }) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
     Column()
     {
         TextField(
@@ -74,13 +102,14 @@ fun Login()
                           context.startActivity(intent)
                       }else{
                           //TODO 这里使用Compose的消息弹窗
+                          //TODO 这部分会出现线程问题，影响到了UI主线程，需要使用多线程
+                          showDialog = true
 
                       }
-
         },
             )
         {
-            
+            Text("Button")
         }
 
     }
@@ -88,8 +117,9 @@ fun Login()
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview2() {
+fun LoginPreview
+            () {
     JwmusicTheme {
-        Login()
+        LoginMethod()
     }
 }
