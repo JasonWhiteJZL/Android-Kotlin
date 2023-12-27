@@ -13,6 +13,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -33,7 +34,7 @@ class LoginActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                  LoginMethod()
+                  Login()
                 }
             }
         }
@@ -59,7 +60,7 @@ fun Login()
                 Text("AlertDialog Title")
             },
             text = {
-                Text("Your entered text: ")
+                Text("Your entered account or password is error,please try again! ")
             },
             confirmButton = {
                 Button(onClick = {
@@ -102,9 +103,7 @@ fun Login()
                           context.startActivity(intent)
                       }else{
                           //TODO 这里使用Compose的消息弹窗
-                          //TODO 这部分会出现线程问题，影响到了UI主线程，需要使用多线程
                           showDialog = true
-
                       }
         },
             )
@@ -117,9 +116,8 @@ fun Login()
 
 @Preview(showBackground = true)
 @Composable
-fun LoginPreview
-            () {
+fun LoginPreview() {
     JwmusicTheme {
-        LoginMethod()
+        Login()
     }
 }
